@@ -1,0 +1,10 @@
+.links li {
+    background-color: #b33951;
+    padding: 1em 2em;
+    display: inline-block;
+}
+.links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}

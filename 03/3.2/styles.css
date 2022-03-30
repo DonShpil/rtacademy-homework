@@ -1,0 +1,35 @@
+h1 {
+    color: #333333;
+    font-size: 24px;
+    line-height: 1.4;
+}
+h2 {
+    font-size: 22px;
+    line-height: 1.4;
+}
+h3 {
+    font-size: 20px;
+    line-height: 1.4;
+}
+h4, h5, h6 {
+    font-size: 18px;
+    line-height: 1.4;
+}
+body {
+    font-family: Arial sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+}
+html {color: #333333;
+}
+
+a:hover {
+    color: #00008b;
+}
+a {
+    text-decoration: none;
+    color: #000000
+}
+header{
+    text-align: center;
+}

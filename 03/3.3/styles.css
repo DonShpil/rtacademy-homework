@@ -1,0 +1,12 @@
+div {
+    width: 400px;
+    margin: 20px 40px;
+    padding: 20px 15px 30px;
+    background-color: #f1faee;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #aad9dc;
+    font-family: Arial sans-serif;
+    font-size: 16px;
+    color: #457b9d;
+}
