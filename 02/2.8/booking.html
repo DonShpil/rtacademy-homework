@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title> Назва сторіники</title>
+</head>
+<body>
+<header>
+    <h1>Назва сайту</h1>
+</header>
+<nav>
+    <ul>
+        <li>Меню навгації</li>
+        <li><a href="index.html">Головна сторінка</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+</nav>
+<main>
+    <h1>Бронювання залу фотостудії</h1>
+    <form action="text" method="get">
+        <div>
+                <label for="surname">* Прізвище:</label>
+            </div>
+        <div> <input type="text" required placeholder="Введите фамилия" id="surname" name="usersurname" minlength="2" maxlength="64">
+            </div>
+            <div>
+                <label for="name">* Імя:</label>
+            </div>
+            <div>
+                <input type="text" required placeholder="Введите имя" id="name" name="usersname" minlength="2" maxlength="64">
+            </div>
+            <div>
+                <label for="mail">* Email:</label>
+            </div>
+            <div>
+                <input type="email"  required placeholder="Ввелите email" id="mail" name="usermail" minlength="2" maxlength="255">
+            </div>
+            <div>
+                <label for="tel">* Телфон :</label>
+            </div>
+            <div>
+                <input type="tel"  required placeholder="+380441234567" id="tel" name="usertel"  maxlength="13">
+            </div>
+            <div>
+                <label for="instapofail">* Профіль Instagram:</label>
+            </div>
+            <div>
+                <input type="url"  placeholder="http://instagram.com/user" id="instapofail" name="usertel">
+            </div>
+            <div>
+                <label for="hall">* Зал:</label>
+            </div>
+            <div>
+            <select>
+                <option value="hall" id="hall" >Оберіть зал</option>
+                <option value="zal1">Зал 1</option>
+                <option value="zal2" >Зал 2</option>
+                <option value="zal3">Зал 3</option>
+            </select>
+                </div>
+
+                <div>
+                <label for="photostudiostart">* Дата і час початку:</label>
+                </div>
+            <div>
+
+                <input type="datetime-local" id="photostudiostart"
+                       name="photostudiostart" min="2022-01-01T00:00"
+                        max="2023-01-01T00:00">
+            </div>
+            <div>
+                 <div>
+                <label for="photostudiofinish">* Дата і час кінця:</label>
+            </div>
+                <div>
+            </div>
+            <div>
+
+                <input type="datetime-local" id="photostudiofinish"
+                       name="photostudiofinish" min="2022-01-01T00:00"
+                        max="2023-01-01T00:00">
+                            </div>
+            <div>
+                <label for="peopleinhall">* Кількість людей в залі</label>
+            </div>
+            <div>
+                <input type="number" id="peopleinhall" min="1" max="10" step="1" required>
+            </div>
+                <div>
+                    <label for="colorfon">* Колір фона</label>
+                </div>
+            <div>
+                <input type="color" id="colorfon" value="#000000">
+            </div>
+            <div>
+                <label for="message">* Коментар:</label>
+            </div>
+            <div>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <div>
+                <div>
+                    <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+                    <label for="subscribeNews">Я погоджуюсь з <a href="regulation.html" target="_blank">правилами фотостудіїї</a></label>
+                </div>
+            <button type="reset">Очистити</button>
+            <button type="submit">Надіслати</button>
+
+        </div>
+</div>
+    </form>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
