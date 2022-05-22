@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let age = 15;
+    let withParents = true;
+// Вариант 1
+
+    let accessAllowed =
+        ( age > 18 )
+            ? 'Yes1'
+            : (
+                withParents
+                    ? 'Yes2'
+                    : 'No'
+            );
+
+
+
+    // Вариант 2
+    let accessAllowed;
+    if (age >18 )
+    {
+        accessAllowed = "yes1";
+    }
+    else
+    {
+        if (withParents)
+        {
+            accessAllowed = "yes2";
+        }
+        else
+        {
+            accessAllowed = "no"
+        }
+    }
+    console.log( 'accessAllowed = ' + accessAllowed );
+
+
+    // Вариант 3
+    accessAllowed = "No";
+    if ( age > 18 || withParents )
+    {
+        accessAllowed = "Yes";
+    }
+
+    // Вариант 3.1
+    accessAllowed = ( age > 18 || withParents ) ? "Yes" : "No";
+
+    // Вариант 4
+    accessAllowed = "yes";
+    if (age < 18 && !withParents)
+    {
+        accessAllowed ="No";
+    }
+
+    // Вариант 4.1
+    accessAllowed = (age < 18 && !withParents) ? "No" :"Yes";
+
+
+</script>
+</body>
+</html>
