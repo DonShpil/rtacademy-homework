@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cityNameCapitalized = capitalize('стОКГольМ');
+    console.log( cityNameCapitalized );
+    let numCapitalized = capitalize(1234567);
+    let numCapitalized1 =capitalize(999999n);
+    let boolCapitalzed = capitalize(false);
+    console.log(numCapitalized,numCapitalized1,boolCapitalzed);
+    let arrayCapitalized = capitalize(["лЬвів", "одеСА", "хАРКіВ"]);
+    console.log(arrayCapitalized);
+
+    function capitalize(valueCity)
+    {
+        if (typeof(valueCity) === "string")
+        {
+            valueCity = valueCity[0].toUpperCase() + valueCity.slice(1).toLowerCase();
+        }
+        if (Array.isArray(valueCity))
+        {
+            for (let i = 0; i < valueCity.length; i++)
+            {
+                valueCity[i] = capitalize(valueCity[i]);
+            }
+        }
+        return valueCity;
+    }
+
+</script>
+</body>
+</html>
