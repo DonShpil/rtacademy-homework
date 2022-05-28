@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cityNameCapitalized = capitalize('стОКГольМ');
+    console.log( cityNameCapitalized );
+    let numCapitalized = capitalize(1234567);
+    let numCapitalized1 =capitalize(999999n);
+    let boolCapitalzed = capitalize(false);
+    console.log(numCapitalized,numCapitalized1,boolCapitalzed);
+    let arrayCapitalized = capitalize(["лЬвів", "одеСА", "хАРКіВ"]);
+    let arrayCapitalizedEtc = capitalize([ "Київ" , "Нью-йорк" , "лОс-анДжелес" , "ріо-дЕ-жанЕйро" , "франКфурт-нА-майНі" , "Сен-Сатюрнен-лЕз-апт" , "лагаРд-Д'апТ"]);
+
+    console.log(arrayCapitalized,arrayCapitalizedEtc);
+
+    function capitalize(valueCity)
+    {
+        if (typeof(valueCity) === "string")
+
+        {
+            if (valueCity.indexOf("-") !== -1)
+            {
+                let words =  valueCity.split("-");
+                words = capitalize(words);
+                valueCity = words.join("-");
+            }
+            else if (valueCity.indexOf("'") !== -1)
+            {
+                let words = valueCity.split("'"); // ['Д','апт']
+                words[0] = words[0].toLowerCase();
+                words[1] = capitalize(words[1]);
+                valueCity = words.join("'");
+            }
+
+            else
+            {
+                valueCity = valueCity[0].toUpperCase() + valueCity.slice(1).toLowerCase();
+            }
+
+        }
+        if (Array.isArray(valueCity))
+        {
+            for (let i = 0; i < valueCity.length; i++)
+            {
+                if(valueCity[i].length <=3 && i !=0 && i != (valueCity.length -1))
+                {
+                    valueCity[i]= valueCity[i].toLowerCase();
+                }
+                else
+                {
+                    valueCity[i] = capitalize(valueCity[i]);
+                }
+
+            }
+        }
+        return valueCity;
+    }
+
+</script>
+
+</body>
+</html>
