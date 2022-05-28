@@ -24,9 +24,10 @@
         console.log(prefix+i);
     }
 // задание 3.1
-    let i = 1;
-    while( i <=32 )
+    let i = 0;
+    while( i < 32 )
     {
+        i++;
         if (i%2)
         {
             continue;
@@ -41,13 +42,13 @@
             prefix += "^";
         }
         console.log(prefix+i);
-        i++;
     }
 
  // Задание 3.2
-    let i = 1;
+    let i = 0;
     do
     {
+        i++;
         if (i%2)
         {
             continue;
@@ -62,7 +63,6 @@
             prefix += "^";
         }
         console.log(prefix+i);
-        i++;
     }
     while( i < 32 );
 
