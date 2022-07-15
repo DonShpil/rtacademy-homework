@@ -9,4 +9,5 @@ CREATE TABLE users (
                        timezone varchar(30),
                        registration_date timestamp,
                        registration_ip varchar(15)
+
 );
