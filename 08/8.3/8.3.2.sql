@@ -11,5 +11,6 @@ CREATE TABLE users (
                        coutry_timezone varchar          not null,
                        registration_date timestamp      not null,
                        registration_ip cidr,
-                       unique (lastname,firstname,birthdate)
+                       unique (lastname,firstname,birthdate),
+                       check ( lower (email))
 );

@@ -9,6 +9,7 @@ CREATE TABLE users (
                        timezone varchar(30) not null,
                        registration_date timestamp not null ,
                        registration_ip varchar(15) not null ,
-                       unique ( lastname, firstname, birthdate )
+                       unique ( lastname, firstname, birthdate ),
+                       check ( lower (email))
 );
 
