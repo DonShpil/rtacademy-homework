@@ -11,7 +11,7 @@
     $b_inten = 50;  // intenger
     $c_float = 3.1416; // float
     $str1 = 'Звичайна строка ';
-    $str2 = " Трішки більше тексту";
+    $str2 = " Трішки більше тексту $name ";
     $name = "Vasya";
     $strhere= <<<EOD
        Привіт, $name. Як в тебе справи ?
