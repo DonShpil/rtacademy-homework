@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function getRandomInt(min,max)
+    {
+        min = typeof min === "bigint" ? Number(min) : Math.round(min);
+        max = typeof max === "bigint" ? Number(max) : Math.round(max);
+        if ( min > max)
+        {
+            min += -max;
+            max += min;
+        }
+       return Math.round( Math.random() * (max - min) + min);
+    }
+    let randomInt = getRandomInt( 1, 100 );
+    console.log( 'Випадкове число: ' + randomInt );
+</script>
+</body>
+
