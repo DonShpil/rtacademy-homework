@@ -28,7 +28,7 @@ function capitalize ( $valuecity )
     {
         foreach ( $valuecity as $key => $value )
         {
-            if ( mb_strlen($value) <= 3 && $key != 0 && array_key_last($valuecity) != $key)
+            if ( mb_strlen($value) <= 3 && $key != 0 && (array_key_last($valuecity) - 1) == $key)
             {
                 $valuecity [$key] = mb_strtolower($value);
             }
